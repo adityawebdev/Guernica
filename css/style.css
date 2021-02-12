@@ -1,0 +1,483 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+:root {
+  --primary: rgb(48, 48, 192);
+  --secondary: black;
+  --pillars: rgb(79, 79, 236);
+  --nav-load-time: 1000ms;
+}
+nav {
+  animation: nav-load var(--nav-load-time) ease-out;
+}
+.main {
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  background: var(--primary);
+  color: white;
+  font-size: 2rem;
+  margin-left: 6rem;
+  /* text-transform: uppercase; */
+}
+.logo h3 {
+  padding: 1rem;
+}
+.links {
+  margin-right: 6rem;
+  margin-top: 2rem;
+  word-spacing: 4rem;
+}
+
+.heading h1 {
+  font-size: 5rem;
+  margin-top: 12rem;
+  color: var(--primary);
+}
+.work-btn {
+  margin-top: 2rem;
+}
+
+footer {
+  margin-top: 14rem;
+  margin-bottom: 4rem;
+  animation: footer-load var(--nav-load-time) ease-out;
+}
+.left {
+  margin-left: 6rem;
+  word-spacing: 2rem;
+}
+footer a {
+  text-decoration: none;
+
+  font-size: 0.7rem;
+
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: 0.15rem;
+  transition: all 0.5s cubic-bezier(1, 0, 0.58, 0.97);
+  position: relative;
+}
+
+footer a::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.07rem;
+  left: 0;
+  top: 0.5rem;
+  background-color: var(--primary);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.5s ease-in-out;
+  transform-origin: left;
+}
+
+footer a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+.right {
+  margin-right: 6rem;
+}
+
+#main-heading {
+  animation: type 3s ease-in;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/**CONTACT*******************************************************************************************/
+
+.office {
+  margin-bottom: -7rem;
+}
+
+.office img {
+  height: 35rem;
+  width: 80rem;
+}
+
+.info {
+  margin-bottom: 5rem;
+  margin-top: 4rem;
+}
+
+.contact {
+  margin-left: -42rem;
+  margin-top: 8rem;
+}
+.contact h1 {
+  font-size: 4rem;
+}
+
+.c-main h5 {
+  margin-top: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.c-left {
+  margin-left: -29rem;
+}
+.c-right {
+  margin-right: -36rem;
+}
+
+.contact h5 {
+  margin-top: 4rem;
+}
+
+.link {
+  text-decoration: none;
+  position: relative;
+  color: black;
+}
+
+.link::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.09rem;
+  left: 0;
+  top: 0.8rem;
+  background-color: black;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.5s ease-in-out;
+  transform-origin: left;
+}
+
+#add::before {
+  top: 00.9rem;
+}
+
+.link:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+#guernica {
+  text-decoration: none;
+  position: relative;
+  color: black;
+}
+
+#guernica::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.09rem;
+  left: 0;
+  top: 1.1rem;
+  background-color: black;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.5s ease-in-out;
+  transform-origin: left;
+}
+
+#guernica:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/**WORK********************************************************************************************/
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: space-between;
+}
+.card-wrapper .card {
+  justify-content: center;
+  margin-left: 3.5rem;
+
+  width: 23rem;
+  height: 23rem;
+  margin-top: 8rem;
+}
+.card-wrapper .card img {
+  width: 22rem;
+  height: 22rem;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+.card-wrapper .card h4 {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.card-wrapper .card h2 {
+  margin-top: 0.3rem;
+  margin-left: 1rem;
+}
+.card .img:hover img {
+  width: 24rem;
+  height: 24rem;
+}
+#work-heading {
+  font-size: 4rem;
+  margin-left: 5rem;
+  margin-top: 4rem;
+  transition: all 0.3s ease-in-out;
+}
+#work-heading:hover {
+  color: var(--primary);
+}
+/**ABOUT page****************************************************************************************/
+#about-heading {
+  font-size: 3rem;
+  transition: all 0.3s ease-in-out;
+  margin-top: 3rem;
+  margin-left: 15rem;
+}
+#about-heading:hover {
+  color: var(--primary);
+}
+
+.about p {
+  margin-left: 15rem;
+  margin-right: 15rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.about p span a {
+  color: black;
+  transition: underline 0.3s ease-in-out;
+}
+.about p span a:hover {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.team {
+  margin-top: 6rem;
+  margin-left: -5rem;
+}
+.team-data {
+  margin-right: 3rem;
+}
+#about-img {
+  margin-top: 5rem;
+  width: 1400px;
+  height: 600px;
+}
+
+.pillars {
+  margin-top: 10rem;
+  margin-left: -15rem;
+}
+.pillars div {
+  margin-left: 14rem;
+  letter-spacing: 0.3rem;
+  font-family: serif;
+}
+.brands-main {
+  margin-right: -6rem;
+  margin-top: 15rem;
+}
+.brands-main img {
+  margin-right: 9rem;
+  margin-top: 5rem;
+}
+.brand-1 {
+  margin-top: 5rem;
+}
+/**** pillars ***/
+.accuracy h3 {
+  position: relative;
+}
+.accuracy h3::before {
+  position: absolute;
+  content: "Even though digital solutions may look magical, there is no magic in creating them. Here at Guernica governing principle is in-depth strategic thinking. We begin by scanning the relevant field, and search for every opportunity to shine. We do not ask, what makes a great design. Instead we look for an answer, how it contributes to your business’ growth and goals.";
+  width: 300%;
+  height: 600%;
+  left: -4rem;
+  top: 3rem;
+  visibility: hidden;
+  transform: scaleY(0);
+  transition: all 0.5s ease-in-out;
+  transform-origin: top;
+  color: black;
+  border: 2px solid var(--pillars);
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  padding: 0.5rem;
+  color: white;
+
+  background: var(--pillars);
+  font-weight: 500;
+}
+.accuracy h3:hover::before {
+  visibility: visible;
+  transform: scaleY(1);
+}
+.flexibility h3 {
+  position: relative;
+}
+.flexibility h3::before {
+  position: absolute;
+  content: "You have a website? Great. A mobile app? Splendid. Digital strategy? Even better. Nevertheless, all of those solutions work if a certain level of integration is achieved. This challenge is best handled by a team of professionals, working in a variety of fields and seeing every aspect of digital universe as a part of a greater whole.";
+  width: 270%;
+  height: 600%;
+  left: -4rem;
+  top: 3rem;
+  visibility: hidden;
+  transform: scaleY(0);
+  transition: all 0.5s ease-in-out;
+  transform-origin: top;
+  color: black;
+  border: 2px solid var(--pillars);
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  padding: 0.5rem;
+  color: white;
+
+  background: var(--pillars);
+  font-weight: 500;
+}
+.flexibility h3:hover::before {
+  visibility: visible;
+  transform: scaleY(1);
+}
+.velocity h3 {
+  position: relative;
+}
+.velocity h3::before {
+  position: absolute;
+  content: "Whether time is objective reality or a side effect of quantum entropy, we complete our projects on time. Some of us begin our day at 6 A.M., others finish long after the sunset. When the problem arises, we are always here to help. Deadline is also a strict commitment at Guernica.";
+  width: 300%;
+  height: 450%;
+  left: -4rem;
+  top: 3rem;
+  visibility: hidden;
+  transform: scaleY(0);
+  transition: all 0.5s ease-in-out;
+  transform-origin: top;
+  color: black;
+  border: 2px solid var(--pillars);
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  padding: 0.5rem;
+  color: white;
+
+  background: var(--pillars);
+  font-weight: 500;
+}
+.velocity h3:hover::before {
+  visibility: visible;
+  transform: scaleY(1);
+}
+.trust h3 {
+  position: relative;
+}
+.trust h3::before {
+  position: absolute;
+  content: "The client-agency relationship is a two-way alliance. We are committed to our clients' products, and keep all their secrets. We convert the latter into a well-designed mobile app, website or other digital solution. The partnership does not end with the last steps of testing – reviews and revisions are a part of our culture.";
+  width: 400%;
+  height: 700%;
+  left: -4rem;
+  top: 3rem;
+  visibility: hidden;
+  transform: scaleY(0);
+  transition: all 0.5s ease-in-out;
+  transform-origin: top;
+  color: black;
+  border: 2px solid var(--pillars);
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  padding: 0.5rem;
+  color: white;
+
+  background: var(--pillars);
+  font-weight: 500;
+}
+.trust h3:hover::before {
+  visibility: visible;
+  transform: scaleY(1);
+}
+/***SERVICES Page***********************************************************************************/
+#services-heading {
+  font-size: 3rem;
+  transition: all 0.3s ease-in-out;
+  margin-top: 7rem;
+  margin-left: -30rem;
+  /* text-transform: uppercase; */
+}
+#services-heading:hover {
+  color: var(--primary);
+}
+
+.list ol {
+  margin-left: -15rem;
+  margin-top: 3rem;
+}
+.list ol li {
+  color: black;
+
+  text-decoration: none;
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.list ol li::before {
+  position: absolute;
+  content: "";
+  width: 37.5rem;
+  height: 0.1rem;
+  left: 0;
+  top: 1.3rem;
+  background-color: var(--primary);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.5s ease-in-out;
+  transform-origin: left;
+}
+.list ol li:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+.list ol li:hover {
+  color: var(--primary);
+}
+
+.list ol li::after {
+  position: absolute;
+  content: "♥withAccuracyFlexibilityVelocityTrust♥";
+  width: 100%;
+  height: 100%;
+  left: 15rem;
+  top: 0;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.8s ease-in-out;
+  transform-origin: left;
+  color: black;
+}
+.list ol li:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+#hr {
+  margin-top: 5rem;
+}
+.contact-btn {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.contact-btn h1 {
+  margin-left: 19rem;
+  transition: all 0.3s ease-in-out;
+}
+.contact-btn button {
+  margin-right: 19rem;
+}
+.contact-btn h1:hover {
+  color: var(--primary);
+}
