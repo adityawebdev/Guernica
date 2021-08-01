@@ -1,0 +1,60 @@
+@media only screen and (max-width: 945px) {
+  #main-heading {
+    font-size: 4rem;
+  }
+  .work-btn {
+    font-size: 1rem;
+  }
+  body {
+    margin-left: -0.8rem;
+  }
+}
+@media only screen and (max-width: 890px) {
+  .b-link {
+    font-size: 0.6rem;
+  }
+  .logo h3 {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  #links {
+    margin-right: 1rem;
+    word-spacing: 0.5rem;
+  }
+}
+@media only screen and (max-width: 945px) {
+  #main-heading {
+    font-size: 2rem;
+  }
+  .work-btn {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #logo {
+    margin-left: 0.5rem;
+  }
+}
+@media only screen and (max-width: 413px) {
+  #logo {
+    margin-left: 1rem;
+  }
+  #links {
+    display: flex;
+    flex-direction: column;
+  }
+  #main-heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-around;
+  }
+  #left {
+    margin-left: 1rem;
+    margin-top: -3rem;
+  }
+  #right {
+    margin-right: 1rem;
+    margin-top: -3rem;
+  }
+}
